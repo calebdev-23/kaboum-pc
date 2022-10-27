@@ -1,0 +1,168 @@
+@import 'bootstrap';
+body
+{
+    font-family: "Century Gothic";
+    margin: 0;
+    padding: 0;
+}
+.margin {
+margin-top: 100px;
+}
+
+/* ----- Section liste -----*/
+.recette {
+
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    background: #179617;
+    color: white;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+.depense
+{
+
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    background: #d33030;
+    color: white;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.liste table a img
+{
+  cursor: pointer;
+}
+
+/* section produits */
+.produits
+{
+
+}
+.produits h4
+{
+    font-weight: bold
+}
+.produits h6
+{
+    font-weight: bold;
+    font-family: \"Courier New\";
+}
+
+.produits form .mySearch
+{
+    width: 75%;
+    border-radius: 0;
+    border : 1px solid black;
+}
+.produits form .mySearch:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.produits .table tr img
+{
+    cursor: pointer;
+}
+
+.produits .myform
+{
+    position: sticky;
+    top: 60px;
+}
+.produits .detail
+{
+    font-size: 12px;
+    border: 1px solid #075985;
+    padding: 5px;
+    border-radius: 5px;
+    background: #075985;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s
+}
+.produits .detail:hover
+{
+    background: #084561;
+}
+/* section produits end*/
+
+/** Section login **/
+.login
+{
+
+}
+.login .container
+{
+
+    display: flex;
+    height: 70vh;
+
+}
+.login .container form
+{
+
+    width: 40%;
+    margin: auto;
+
+}
+/**responsive login**/
+
+/**Section navbar**/
+.navbar .liste
+ {
+    display: block;
+    position: absolute;
+    right: 100px;
+    margin: 0;
+    padding: 0;
+ }
+.navbar .liste li
+{
+    list-style-type: none;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin-left: 15px;
+}
+/*-----------Section recette start ----------*/
+.recetteSearch{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recettes form .mySearch
+{
+    border-radius: 0;
+    border : 1px solid black;
+
+}
+.recettes form .mySearch:focus {
+    box-shadow: none;
+    outline: none;
+}
+.recettes form .btn-r {
+    border : 1px solid black;
+    border-radius: 0;
+    transition: all 0.4s;
+}
+.recettes form .btn-r:hover {
+    background: black;
+    color: white;
+}
+/*-----------Section recette end ----------*/
+
+.mylogo{
+    width: 60px;
+}
+
+

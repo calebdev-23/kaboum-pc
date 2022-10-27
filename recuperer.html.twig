@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+{% block body %}
+    <section class="produits">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-2 col-lg-2">
+                    {{ form(form) }}
+                </div>
+                <div class="col-12 col-sm-12 col-md-10 col-lg-10">
+
+                    <div class="row justify-content-center">
+                        {% for produit in produits %}
+                            <div class="col-md-3">
+                                <div class="card text-center shadow">
+                                    <div class="text-center">
+                                        <img src="upload/{{ produit.illustration }}" alt="logo" class="img-fluid card-img-top  ">
+                                    </div>
+                                    <div class="card-body">
+                                        <h6 >{{ produit.name }}</h6>
+                                        <p> Stock : {{ produit.stock }}<br>
+                                            <span class="price">{{ ((produit.price)/100)|number_format('0',',','.') }}Ar</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

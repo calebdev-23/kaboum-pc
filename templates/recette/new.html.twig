@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recette-Kaboum{% endblock %}
+
+{% block body %}
+    <section class="recettes">
+        <div class="container">
+            {{ form_start(form) }}
+                {{ form_row(form.produits) }}
+                {{ form_row(form.quantite) }}
+                {{ form_row(form.price) }}
+                {{ form_row(form.payment) }}
+                {{ form_row(form.lieu) }}
+                {{ form_row(form.observation) }}
+                {{ form_row(form.date) }}
+            <button type="submit" class="btn btn-success btn-sm">Ajouter</button>
+            {{ form_end(form) }}
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<section class="maison">
+    <div class="container">
+        <h1>Liste des produits qui viennent de notre maison</h1>
+        {{ form_start(form) }}
+            {{ form_help(form.name) }}
+            {{ form_row(form.name) }}
+            {{ form_row(form.produit) }}
+        {{ form_end(form) }}
+    </div>
+</section>
+{% endblock %}
