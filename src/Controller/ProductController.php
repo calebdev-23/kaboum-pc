@@ -27,6 +27,7 @@ class ProductController extends AbstractController
         $searchProduit = new SearchProduit();
         $form = $this->createForm(SearchProduitForm::class, $searchProduit);
         $form->handleRequest($request);
+
         $produits = $repository->FilterProduit($searchProduit);
 
         $paginate = $paginator->paginate(

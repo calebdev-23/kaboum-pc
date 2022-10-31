@@ -1,4 +1,5 @@
 @import 'bootstrap';
+@import '~font-awesome';
 body
 {
     font-family: "Century Gothic";
@@ -158,6 +159,11 @@ margin-top: 100px;
 .recettes form .btn-r:hover {
     background: black;
     color: white;
+}
+
+.recettes th a{
+    text-decoration: none;
+    color: black;
 }
 /*-----------Section recette end ----------*/
 

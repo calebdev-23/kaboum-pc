@@ -8,10 +8,10 @@ use App\Classe\SearchRecetteForm;
 use App\Entity\Recette;
 use App\Form\RecetteFormType;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class RecetteController extends AbstractController
@@ -23,12 +23,17 @@ class RecetteController extends AbstractController
         $this->manager = $entityManager;
     }
     #[Route('/recette', name: 'app_recette')]
-    public function index(Request $request): Response
+    public function index(Request $request, PaginatorInterface $paginator): Response
     {
         $searchRecette = new SearchRecette();
         $form = $this->createForm(SearchRecetteForm::class, $searchRecette);
         $form->handleRequest($request);
-        $recettes = $this->manager->getRepository(Recette::class)->Filter($searchRecette);
+        $recette = $this->manager->getRepository(Recette::class)->Filter($searchRecette);
+        $recettes = $paginator->paginate(
+            $recette,
+            $request->query->getInt('page', 1),
+            100
+        );
         return $this->render('recette/index.html.twig',[
             'recettes' => $recettes,
             'form'=>$form->createView(),

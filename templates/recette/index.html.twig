@@ -12,8 +12,12 @@
      {{ form_end(form) }}
     </div>
     <div class="col-12 col-md-9 col-lg-9">
-     <h1>Recette</h1>
-     <a href="{{ path('app_new_recette') }}" class="btn btn-success btn-sm">Ajouter</a>
+     <div class="d-flex align-items-center">
+      <h1>Recette  </h1>
+      <a href="{{ path('app_new_recette') }}" class=" btn btn-success btn-sm mx-3">Ajouter</a>
+     </div>
+
+
      {% if recettes|length == 0 %}
       <div class="alert alert-danger text-center mt-5" role="alert">
        Aucune recette
@@ -22,10 +26,10 @@
       <table class="table table-striped">
        <thead>
        <tr>
-        <th scope="col">Date</th>
-        <th scope="col">Nom du produits</th>
-        <th scope="col">Quantité</th>
-        <th scope="col">Prix</th>
+        <th scope="col">{{ knp_pagination_sortable(recettes, 'Date', 'date') }}</th>
+        <th scope="col">{{ knp_pagination_sortable(recettes, 'Nom du produit', 'name') }}</th>
+        <th scope="col">{{ knp_pagination_sortable(recettes, 'Quantité', 'quantite') }}</th>
+        <th scope="col">{{ knp_pagination_sortable(recettes, 'Prix', 'price') }}</th>
         <th scope="col">Prix Total</th>
         <th scope="col">Payement</th>
         <th scope="col">Lieu de livraison</th>
