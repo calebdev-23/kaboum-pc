@@ -5,6 +5,8 @@ namespace App\Repository;
 use App\Classe\SearchRecette;
 use App\Entity\Recette;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Query\Parameter;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -46,8 +48,11 @@ class RecetteRepository extends ServiceEntityRepository
 
         if(!empty($recette->string)){
             $query = $query
-                ->andWhere('r.name LIKE :string')
-                ->setParameter('string', "%$recette->string%");
+                ->andWhere('r.name LIKE :string OR r.observation LIKE :client')
+                ->setParameters(new ArrayCollection(array(
+                            new Parameter('string', "%$recette->string%"),
+                            new Parameter('client', "%$recette->string%"),
+                )));
         }
         if(!empty($recette->date)){
             $query = $query
@@ -61,6 +66,16 @@ class RecetteRepository extends ServiceEntityRepository
                 ->setParameter('categories', $recette->categories);
         }
         return $query->getQuery()->getResult();
+    }
+    public function RecetteToday(){
+        $date  = new \DateTime('now');
+        $date->setTime(0, 0, 0);
+
+        $query = $this->createQueryBuilder('r')
+            ->select('r')
+            ->andWhere('r.date = :date')
+            ->setParameter('date', $date);
+       return $query->getQuery()->getResult();
     }
 
 //    /**

@@ -19,22 +19,15 @@ class Categories
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $description = null;
+    #[ORM\Column(length: 255)]
+    private ?string $slug = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $illustration = null;
-
-    #[ORM\OneToMany(mappedBy: 'categorie', targetEntity: Produits::class)]
+    #[ORM\ManyToMany(targetEntity: Produits::class, mappedBy: 'categories')]
     private Collection $produits;
-
-    #[ORM\OneToMany(mappedBy: 'HomeCategories', targetEntity: Home::class)]
-    private Collection $homes;
 
     public function __construct()
     {
         $this->produits = new ArrayCollection();
-        $this->homes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -54,26 +47,19 @@ class Categories
         return $this;
     }
 
-    public function getDescription(): ?string
+    public function __toString(): string
     {
-        return $this->description;
+       return $this->name;
     }
 
-    public function setDescription(?string $description): self
+    public function getSlug(): ?string
     {
-        $this->description = $description;
-
-        return $this;
+        return $this->slug;
     }
 
-    public function getIllustration(): ?string
+    public function setSlug(string $slug): self
     {
-        return $this->illustration;
-    }
-
-    public function setIllustration(?string $illustration): self
-    {
-        $this->illustration = $illustration;
+        $this->slug = $slug;
 
         return $this;
     }
@@ -90,7 +76,7 @@ class Categories
     {
         if (!$this->produits->contains($produit)) {
             $this->produits->add($produit);
-            $produit->setCategorie($this);
+            $produit->addCategory($this);
         }
 
         return $this;
@@ -99,46 +85,10 @@ class Categories
     public function removeProduit(Produits $produit): self
     {
         if ($this->produits->removeElement($produit)) {
-            // set the owning side to null (unless already changed)
-            if ($produit->getCategorie() === $this) {
-                $produit->setCategorie(null);
-            }
-        }
-
-        return $this;
-    }
-    public function __toString(): string
-    {
-       return $this->name;
-    }
-
-    /**
-     * @return Collection<int, Home>
-     */
-    public function getHomes(): Collection
-    {
-        return $this->homes;
-    }
-
-    public function addHome(Home $home): self
-    {
-        if (!$this->homes->contains($home)) {
-            $this->homes->add($home);
-            $home->setHomeCategories($this);
+            $produit->removeCategory($this);
         }
 
         return $this;
     }
 
-    public function removeHome(Home $home): self
-    {
-        if ($this->homes->removeElement($home)) {
-            // set the owning side to null (unless already changed)
-            if ($home->getHomeCategories() === $this) {
-                $home->setHomeCategories(null);
-            }
-        }
-
-        return $this;
-    }
 }

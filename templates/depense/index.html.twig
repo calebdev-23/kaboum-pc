@@ -1,13 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Dépense-kaboum{% endblock %}
+{% block title %}Dépense{% endblock %}
 
 {% block body %}
     <section class="depenses">
         <div class="container">
-            <h2>Dépense du jour</h2>
-            <a href="{{ path('app_new_depense') }}" class="btn btn-danger btn-sm">Ajouter</a>
-            {{ form(form) }}
+            <div class="d-flex align-items-center">
+                <h2>Dépense </h2>
+                <a href="{{ path('app_new_depense') }}" class="btn btn-danger btn-sm  mx-3">Ajouter</a>
+            </div>
+            <div class="text-end">
+                <a href="{{ path('app_depense_today') }}" class="btn btn-primary btn-sm">Dépense du jour</a>
+            </div>
+             {{ form_start(form, { 'attr' : { class : 'd-flex align-items-center justify-content-center' }}) }}
+                        {{ form_row(form.date, { 'attr' : { class : 'mb-0' }}) }}
+                        <button type="submit" class="btn btn-success btn-sm mb-3 mx-3">Filtrer</button>
+             {{ form_end(form) }}
+
              {% set totale = null %}
             {% if depense|length == 0 %}
                 <div class="alert alert-danger text-center" role="alert">
@@ -17,7 +26,7 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
-                            <th scope="col">Date</th>
+                            <th scope="col" class="">{{ knp_pagination_sortable(depense, 'Date', 'date') }}</th>
                             <th scope="col">Designation</th>
                             <th scope="col">Dépense</th>
                         </tr>

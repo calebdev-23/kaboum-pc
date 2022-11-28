@@ -34,7 +34,7 @@ class Client
     private Collection $commandes;
 
     public function __construct()
-    {
+     {
         $this->commandes = new ArrayCollection();
     }
 
@@ -131,5 +131,9 @@ class Client
         }
 
         return $this;
+    }
+    public function __toString(): string
+    {
+        return $this->name;
     }
 }

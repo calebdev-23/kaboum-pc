@@ -2,15 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d59de3e0-dcac-48b0-a80e-19a8657634ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/knp_paginator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pagination/sortable.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/cart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/uc/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/plus.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/plus.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classe/SearchDepenseForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classe/SearchDepenseForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classe/SearchProduitForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classe/SearchProduitForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/CategoriesCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/CategoriesCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ProduitHomeCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ProduitHomeCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ProduitsCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ProduitsCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DepenseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DepenseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/RecetteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RecetteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Commandes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Commandes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Payment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Produits.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Produits.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/DepenseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/DepenseRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ProduitsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProduitsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/RecetteRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RecetteRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/depense/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/depense/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/depense/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/depense/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/depense/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/depense/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/product/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/recette/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recette/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/recette/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recette/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/recette/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recette/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +222,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Documents/RUDI/Rado/projet 2023/kaboum-pc23&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sam/Documents/kaboum-pc23&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -285,7 +310,35 @@
       <workItem from="1666872279603" duration="1550000" />
       <workItem from="1666936205106" duration="8981000" />
       <workItem from="1666963832600" duration="1853000" />
-      <workItem from="1667196643742" duration="223000" />
+      <workItem from="1667196643742" duration="659000" />
+      <workItem from="1667197312955" duration="5164000" />
+      <workItem from="1667208999250" duration="3174000" />
+      <workItem from="1667230338177" duration="554000" />
+      <workItem from="1667232449008" duration="23000" />
+      <workItem from="1667232481003" duration="46000" />
+      <workItem from="1667232571308" duration="5494000" />
+      <workItem from="1667453347341" duration="14000" />
+      <workItem from="1667453417236" duration="4000" />
+      <workItem from="1667453537109" duration="11000" />
+      <workItem from="1667458865492" duration="7891000" />
+      <workItem from="1667467037304" duration="1066000" />
+      <workItem from="1667528223515" duration="1468000" />
+      <workItem from="1667530412256" duration="4845000" />
+      <workItem from="1667538053481" duration="28000" />
+      <workItem from="1667666032968" duration="6046000" />
+      <workItem from="1667698851274" duration="1010000" />
+      <workItem from="1667721340939" duration="1089000" />
+      <workItem from="1667792755507" duration="594000" />
+      <workItem from="1667836024682" duration="1262000" />
+      <workItem from="1668440822110" duration="4509000" />
+      <workItem from="1669082728627" duration="4145000" />
+      <workItem from="1669218655391" duration="6659000" />
+      <workItem from="1669255470981" duration="6297000" />
+      <workItem from="1669263415433" duration="1432000" />
+      <workItem from="1669522843060" duration="4013000" />
+      <workItem from="1669543230714" duration="7903000" />
+      <workItem from="1669562481940" duration="4860000" />
+      <workItem from="1669615319964" duration="505000" />
     </task>
     <servers />
   </component>
@@ -317,7 +370,7 @@
             <State>
               <option name="CUSTOM_BOOLEAN_PROPERTIES">
                 <map>
-                  <entry key="Show.Git.Branches" value="false" />
+                  <entry key="Show.Git.Branches" value="true" />
                 </map>
               </option>
               <option name="FILTERS">
@@ -341,6 +394,11 @@
         <entry key="Branch">
           <value>
             <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="master" />

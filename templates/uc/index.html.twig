@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UcController!{% endblock %}
+
+{% block body %}
+    <section class="desktop">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <h1>Uc Vendu</h1>
+                <a href="{{ path('app_new_uc') }}" class="btn btn-success btn-sm mx-3">Ajouter</a>
+            </div>
+            <table class="table">
+                <thead>
+                <tr>
+
+                    <th scope="col">Date</th>
+                    <th scope="col">Client</th>
+                    <th scope="col">Payment</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for unite in unite %}
+                    <tr>
+                        <td>{{ unite.date|date('d/m/Y') }}</td>
+                        <td>{{ unite.client }}</td>
+                        <td>{{ unite.payment }}</td>
+                        <td ><a href="" class="btn btn-warning btn-sm">Detail</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+{% endblock %}

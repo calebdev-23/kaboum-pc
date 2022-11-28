@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Clients{% endblock %}
+
+{% block body %}
+    {% for client in clients %}
+        <a href="{{ path('app_show_client',{'id':client.id}) }}">{{client.name}} </a>
+    {% endfor %}
+{% endblock %}

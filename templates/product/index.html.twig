@@ -1,49 +1,55 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Produits-Kaboum{% endblock %}
+{% block title %}Produits{% endblock %}
 
 {% block body %}
 <section class="produits">
-    <div class="container-fluid">
-
+    <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-4 col-lg-3">
-                       {{ form_start(form,  { 'attr':{ 'class': 'myform'}}) }}
-                        <h6>Recherche </h6>
-                        {{ form_row(form.string) }}
-                        <h6>Categories</h6>
-                        {{ form_row(form.categories) }}
+                    <div class="col-12 col-md-12 col-lg-12">
+                       {{ form_start(form, { 'attr' : { class : 'd-flex align-items-center' }}) }}
+                            {{ form_row(form.string, { 'attr' : { class : 'mb-0' }}) }}
+                            <button class="btn btn-success btn-sm mb-3 mx-3">Rechercher</button>
                         {{ form_end(form) }}
-                    </div>
-                    <div class="col-12 col-md-8 col-lg-9">
-                        <table class="table table-striped">
-                            <thead>
-                            <tr>
-                                <th scope="col"> Nom</th>
-                                <th scope="col">Prix</th>
-                                <th scope="col">Disponible</th>
-                            </tr>
-                            </thead>
-                            <tbody>
 
-                            {% for produit  in produits %}
-                                <tr>
-                                    <td><span class="text-dark">{{ produit.name }}</span></td>
-                                    <td>{{ (produit.price/100)|number_format(0, ',','.') }} Ar</td>
-                                    <td>
-                                        {% if produit.stock < 1 %}
-                                            <span class="badge text-bg-danger">Stock épouisé</span>
-                                        {% else %}
-                                            <span class="badge text-bg-info">{{ produit.stock }}</span>
-                                        {% endif %}
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                            </tbody>
-                        </table>
-                        <div>
-                            {{ knp_pagination_render(produits)}}
-                        </div>
+
+                        {% if  produits|length == 0 %}
+                            <div class="alert alert-danger text-center" role="alert">
+                                Aucun produit
+                            </div>
+                            {% else %}
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Nom</th>
+                                        <th scope="col">Prix</th>
+                                        <th scope="col">Disponible</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for produit  in produits %}
+                                        <tr>
+                                            <td><span class="text-dark">{{ produit.name }}</span></td>
+                                            <td>{{ (produit.price/100)|number_format(0, ',','.') }} Ar</td>
+                                            <td>
+                                                {% if produit.stock < 1 %}
+                                                    <span class="badge text-bg-danger">Stock épouisé</span>
+                                                {% else %}
+                                                    <span class="badge text-bg-info">{{ produit.stock }}</span>
+                                                {% endif %}
+                                            </td>
+                                            {% if produit.stock > 0 %}
+                                                <td><a href="{{ path('app_product_to_recette', {'id': produit.id}) }}"><img src="{{ asset('img/cart-plus.svg') }}" alt=""></a></td>
+                                            {% endif %}
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                                <div>
+                                    {{ knp_pagination_render(produits)}}
+                                </div>
+                        {% endif %}
+
                     </div>
                 </div>
 

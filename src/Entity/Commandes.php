@@ -103,4 +103,8 @@ class Commandes
 
         return $this;
     }
+    public function __toString(): string
+    {
+        return $this->client;
+    }
 }

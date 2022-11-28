@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dépense du jour{% endblock %}
+
+{% block body %}
+    <section class="depenses">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <h2>Dépense du jour</h2>
+                <a href="{{ path('app_depense') }}" class="btn btn-primary btn-sm  mx-3 ">Retour</a>
+            </div>
+
+            {% set totale = null %}
+            {% if depense|length == 0 %}
+                <div class="alert alert-danger text-center" role="alert">
+                    Aucun dépense aujourd'hui
+                </div>
+            {% else %}
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Designation</th>
+                        <th scope="col">Dépense</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for dep in depense %}
+                        <tr>
+                            <td>{{ dep.date|date('d-m-Y') }}</td>
+                            <td>{{ dep.designation }}</td>
+                            <td>{{ dep.depense|number_format(0,',','.') }} AR</td>
+                            <td>
+                                <a href="{{ path('app_edit_depense_today', { id : dep.id}) }}" class="mx-3"><img src="{{ asset('img/pencil.svg') }}" alt=""></a>
+                            </td>
+                        </tr>
+                        {% set totale = totale + dep.depense %}
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <div class="depense">
+                    dépense totale :  {{ totale|number_format(0,',','.') }} Ar
+                </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

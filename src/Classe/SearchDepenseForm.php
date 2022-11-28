@@ -13,17 +13,12 @@ class SearchDepenseForm extends AbstractType{
 
             ->add('date',DateType::class,[
                 'required'=>false,
+                'label'=>false,
                 'widget'=>'choice',
                 'placeholder'=>[
                     'month'=>'Mois',
                     'day'=>'Jour',
                     'year'=>'Année',
-                ]
-            ])
-            ->add('submit',SubmitType::class,[
-                'label'=>'Filtrer',
-                'attr'=>[
-                    'class'=> 'btn btn-sm btn-primary'
                 ]
             ])
         ;

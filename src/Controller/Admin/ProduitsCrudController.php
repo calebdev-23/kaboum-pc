@@ -33,10 +33,10 @@ class ProduitsCrudController extends AbstractCrudController
                 ->setCurrency("EUR")
                 ->setNumDecimals(0),
             AssociationField::new('fournisseur','Fournisseurs'),
-           AssociationField::new('categorie','Catégories'),
+             AssociationField::new('categories','Catégories'),
             /*  ImageField::new('illustration','Image')
-                 ->setBasePath('/upload/')
-                 ->setUploadDir('public/upload/'), */
+                  ->setBasePath('/upload/')
+                  ->setUploadDir('public/upload/'), */
         ];
     }
     public function configureActions(Actions $actions): Actions

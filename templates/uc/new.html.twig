@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recette-uc{% endblock %}
+
+{% block body %}
+    <section class="new-uc">
+        <div class="container">
+        {{ form_start(form) }}
+
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                    {{ form_row(form.Client) }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    {{ form_row(form.date) }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    {{ form_row(form.boitier)}}
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    {{ form_row(form.mere) }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    {{ form_row(form.alimentation)}}
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    {{ form_row(form.Processeur) }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    {{ form_row(form.graphique)}}
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    {{ form_row(form.HDD) }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    {{ form_row(form.ram)}}
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    {{ form_row(form.SSD) }}
+                </div>
+
+            </div>
+
+            {{ form_end(form) }}
+        </div>s
+    </section>
+{% endblock %}
+
+
+

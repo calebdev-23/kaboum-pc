@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recette{% endblock %}
+
+{% block body %}
+    <section class="recettes">
+        <div class="container">
+
+
+
+                    <div class="d-flex align-items-center">
+                        <h2>  Recette du jour </h2>
+                        <a href="{{ path('app_recette') }}" class="btn btn-success btn-sm  mx-3 ">Retour</a>
+                        {# <a href="{{ path('app_new_recette') }}" class=" btn btn-success btn-sm mx-3">Ajouter</a> #}
+                    </div>
+
+
+                    {% if recettes|length == 0 %}
+                        <div class="alert alert-danger text-center mt-5" role="alert">
+                            Aucune recette
+                        </div>
+                    {% else %}
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Nom du produit</th>
+                                <th scope="col">Quantité</th>
+                                <th scope="col">Prix</th>
+                                <th scope="col">Prix Total</th>
+                                <th scope="col">Payement</th>
+                                <th scope="col">Client</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% set recetteTotale = null %}
+                            {% for recette in recettes %}
+                                <tr>
+                                    <td>{{ recette.date|date('d/m/Y') }}</td>
+                                    <td>{{ recette.produits }}</td>
+                                    <td>
+                                        {# <a href="{{ path('app_decrease_quantite_recette',{'id': recette.id}) }}"class="btn btn-danger btn-sm">-</a> #}
+
+                                        {{ recette.quantite }}
+
+                                        {# {% if recette.produits.stock != 0 %}
+           <a href="{{ path('app_add_quantite_recette',{'id': recette.id}) }}"class="btn btn-success btn-sm">+</a>
+           {% else %}
+            <a href="{{ path('app_add_quantite_recette',{'id': recette.id}) }}"class="btn btn-success btn-sm disabled">+</a>
+          {% endif %} #}
+                                    </td>
+                                    <td>{{ recette.price|number_format(0,',','.') }} Ar</td>
+                                    <td>{{ (recette.price * recette.quantite)|number_format(0,',','.') }} Ar</td>
+                                    <td>
+                                        {% if  recette.payment == 'Non payé' %}
+                                            <button class="btn btn-danger btn-sm"> {{ recette.payment }}</button>
+                                        {% else %}
+                                            <button class="btn btn-success btn-sm text-white"> {{ recette.payment }}</button>
+                                        {% endif %}
+
+                                    </td>
+                                    <td>{{ recette.observation }}</td>
+                                    <td>
+                                        <a href="{{ path('app_edit_recette_today', { id : recette.id}) }}" class="mx-3"><img src="{{ asset('img/pencil.svg') }}" alt=""></a>
+                                        <a href="{{ path('app_delete_recette_today', { id : recette.id}) }}"><img src="{{ asset('img/trash.svg') }}" alt=""></a>
+                                    </td>
+                                </tr>
+                                {% set recetteTotale =  recetteTotale + (recette.price * recette.quantite) %}
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                        <p class="recette">
+                            Recette total : {{ recetteTotale|number_format(0,',','.') }} Ar
+                        </p>
+                    {% endif %}
+                </div>
+    </section>
+
+{% endblock %}

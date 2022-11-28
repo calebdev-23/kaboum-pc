@@ -4,8 +4,10 @@ namespace App\Repository;
 
 use App\Classe\SearchDepense;
 use App\Entity\Depense;
+use Cassandra\Date;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\Form\Extension\Core\DataTransformer\DateTimeToHtml5LocalDateTimeTransformer;
 
 /**
  * @extends ServiceEntityRepository<Depense>
@@ -46,6 +48,18 @@ class DepenseRepository extends ServiceEntityRepository
             $query = $query->andWhere('d.date = :date')
                 ->setParameter('date', $searchDepense->date);
         }
+        return $query->getQuery()->getResult();
+    }
+
+    public function today()
+    {
+        $date = new \DateTime('now');
+        $date->setTime(0, 0,0);
+        $query = $this->createQueryBuilder('d')
+            ->select('d')
+            ->andWhere('d.date = :date')
+            ->setParameter('date', $date);
+
         return $query->getQuery()->getResult();
     }
 

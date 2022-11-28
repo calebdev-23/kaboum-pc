@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Recette-Kaboum{% endblock %}
+{% block title %}Recette{% endblock %}
 
 {% block body %}
  <section class="recettes">
@@ -13,8 +13,8 @@
     </div>
     <div class="col-12 col-md-9 col-lg-9">
      <div class="d-flex align-items-center">
-      <h1>Recette  </h1>
-      <a href="{{ path('app_new_recette') }}" class=" btn btn-success btn-sm mx-3">Ajouter</a>
+     <h1>  Recette </h1>
+      {# <a href="{{ path('app_new_recette') }}" class=" btn btn-success btn-sm mx-3">Ajouter</a> #}
      </div>
 
 
@@ -23,7 +23,7 @@
        Aucune recette
       </div>
      {% else %}
-      <table class="table table-striped">
+      <table class="table table-hover">
        <thead>
        <tr>
         <th scope="col">{{ knp_pagination_sortable(recettes, 'Date', 'date') }}</th>
@@ -32,9 +32,7 @@
         <th scope="col">{{ knp_pagination_sortable(recettes, 'Prix', 'price') }}</th>
         <th scope="col">Prix Total</th>
         <th scope="col">Payement</th>
-        <th scope="col">Lieu de livraison</th>
-        <th scope="col">Observation</th>
-        <th scope="col">Actions</th>
+        <th scope="col">Client</th>
        </tr>
        </thead>
        <tbody>
@@ -43,11 +41,27 @@
         <tr>
          <td>{{ recette.date|date('d/m/Y') }}</td>
          <td>{{ recette.produits }}</td>
-         <td>{{ recette.quantite }}</td>
+         <td>
+        {# <a href="{{ path('app_decrease_quantite_recette',{'id': recette.id}) }}"class="btn btn-danger btn-sm">-</a> #}
+
+          {{ recette.quantite }}
+
+{# {% if recette.produits.stock != 0 %}
+           <a href="{{ path('app_add_quantite_recette',{'id': recette.id}) }}"class="btn btn-success btn-sm">+</a>
+           {% else %}
+            <a href="{{ path('app_add_quantite_recette',{'id': recette.id}) }}"class="btn btn-success btn-sm disabled">+</a>
+          {% endif %} #}
+         </td>
          <td>{{ recette.price|number_format(0,',','.') }} Ar</td>
          <td>{{ (recette.price * recette.quantite)|number_format(0,',','.') }} Ar</td>
-         <td>{{ recette.payment }}</td>
-         <td>{{ recette.lieu }}</td>
+         <td>
+           {% if  recette.payment == 'Non payé' %}
+             <button class="btn btn-danger btn-sm"> {{ recette.payment }}</button>
+           {% else %}
+            <button class="btn btn-success btn-sm text-white"> {{ recette.payment }}</button>
+           {% endif %}
+
+         </td>
          <td>{{ recette.observation }}</td>
          <td>
           <a href="{{ path('app_edit_recette', { id : recette.id}) }}" class="mx-3"><img src="{{ asset('img/pencil.svg') }}" alt=""></a>

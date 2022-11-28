@@ -32,9 +32,6 @@ class Produits
     private ?int $stock = null;
 
     #[ORM\ManyToOne(inversedBy: 'produits')]
-    private ?Categories $categorie = null;
-
-    #[ORM\ManyToOne(inversedBy: 'produits')]
     private ?Fournisseurs $fournisseur = null;
 
     #[ORM\OneToMany(mappedBy: 'produit', targetEntity: DetailCommande::class)]
@@ -46,8 +43,9 @@ class Produits
     #[ORM\OneToMany(mappedBy: 'produits', targetEntity: Recette::class)]
     private Collection $recette;
 
-    #[ORM\OneToMany(mappedBy: 'produit', targetEntity: Home::class)]
-    private Collection $homes;
+    #[ORM\ManyToMany(targetEntity: Categories::class, inversedBy: 'produits')]
+    private Collection $categories;
+
 
     public function __construct()
     {
@@ -55,6 +53,15 @@ class Produits
         $this->recettes = new ArrayCollection();
         $this->recette = new ArrayCollection();
         $this->homes = new ArrayCollection();
+        $this->uniteCentrales = new ArrayCollection();
+        $this->Processeur = new ArrayCollection();
+        $this->ram = new ArrayCollection();
+        $this->graphique = new ArrayCollection();
+        $this->hdd = new ArrayCollection();
+        $this->SSD = new ArrayCollection();
+        $this->alimentation = new ArrayCollection();
+        $this->boitier = new ArrayCollection();
+        $this->categories = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -97,7 +104,6 @@ class Produits
 
         return $this;
     }
-
 
 
     public function getDescription(): ?string
@@ -192,7 +198,7 @@ class Produits
 
     public function __toString(): string
     {
-       return $this->name;
+        return $this->name;
     }
 
     /**
@@ -226,31 +232,25 @@ class Produits
     }
 
     /**
-     * @return Collection<int, Home>
+     * @return Collection<int, Categories>
      */
-    public function getHomes(): Collection
+    public function getCategories(): Collection
     {
-        return $this->homes;
+        return $this->categories;
     }
 
-    public function addHome(Home $home): self
+    public function addCategory(Categories $category): self
     {
-        if (!$this->homes->contains($home)) {
-            $this->homes->add($home);
-            $home->setProduit($this);
+        if (!$this->categories->contains($category)) {
+            $this->categories->add($category);
         }
 
         return $this;
     }
 
-    public function removeHome(Home $home): self
+    public function removeCategory(Categories $category): self
     {
-        if ($this->homes->removeElement($home)) {
-            // set the owning side to null (unless already changed)
-            if ($home->getProduit() === $this) {
-                $home->setProduit(null);
-            }
-        }
+        $this->categories->removeElement($category);
 
         return $this;
     }

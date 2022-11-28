@@ -18,22 +18,15 @@ class SearchProduitForm extends AbstractType
                 'required'=>false,
                 'attr'=>[
                     'placeholder'=> 'Votre recherche',
-                    'class'=> 'mySearch'
+                    'class'=> 'mySearch sm'
                 ]
             ])
-            ->add('categories', EntityType::class,[
+          /*  ->add('categories', EntityType::class,[
                 'label'=>false,
                 'class'=>Categories::class,
                 'expanded'=>true,
                 'multiple'=>true,
-            ])
-
-            ->add('submit',SubmitType::class,[
-                'label'=>'Filtrer',
-                'attr'=>[
-                    'class'=> 'btn btn-sm btn-success'
-                ]
-            ])
+            ]) */
         ;
     }
 

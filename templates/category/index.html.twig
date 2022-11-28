@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ categorie.name }}{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="container">
+            <h1>{{ categorie.name }}</h1>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Disponible</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for produit  in produit %}
+                    <tr>
+                        <td><span class="text-dark">{{ produit.name }}</span></td>
+                        <td>{{ (produit.price/100)|number_format(0, ',','.') }} Ar</td>
+                        <td>
+                            {% if produit.stock < 1 %}
+                                <span class="badge text-bg-danger">Stock épouisé</span>
+                            {% else %}
+                                <span class="badge text-bg-info">{{ produit.stock }}</span>
+                            {% endif %}
+                        </td>
+                        {% if produit.stock > 0 %}
+                            <td><a href="{{ path('app_product_to_recette', {'id': produit.id}) }}"><img src="{{ asset('img/plus.svg') }}" alt=""></a></td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {{ knp_pagination_render(produit) }}
+        </div>
+    </section>
+{% endblock %}
