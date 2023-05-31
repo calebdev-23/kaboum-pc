@@ -12,10 +12,9 @@
                             <button class="btn btn-success btn-sm mb-3 mx-3">Rechercher</button>
                         {{ form_end(form) }}
 
-
                         {% if  produits|length == 0 %}
                             <div class="alert alert-danger text-center" role="alert">
-                                Aucun produit
+                                Aucune résultat
                             </div>
                             {% else %}
                                 <table class="table table-hover">
@@ -45,15 +44,12 @@
                                     {% endfor %}
                                     </tbody>
                                 </table>
-                                <div>
+                                <div class="d-flex justify-content-center">
                                     {{ knp_pagination_render(produits)}}
                                 </div>
                         {% endif %}
-
                     </div>
                 </div>
-
-
 
     </div>
 </section>

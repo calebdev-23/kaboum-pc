@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Customer;
 use App\Entity\Payment;
 use App\Entity\Produits;
 use App\Entity\Recette;
@@ -36,20 +37,13 @@ class RecetteEditFormType extends AbstractType
                 'label'=>'payment',
                 'class'=>Payment::class
             ])
-            ->add('lieu',ChoiceType::class,[
-                'label'=>'Lieu de livraison',
-                'choices'=>[
-                    'Pas de livraison'=>'Pas de livraison',
-                    'Antananarivo' => 'Antananarivo',
-                    'Toamasina' => 'Toamasina',
-                    'Mahjanga' => 'Mahajanga',
-                    'Fianarantsoa' => 'Fianarantsoa',
-                    'Toliara' => 'Toliara',
-                    'Antsiranana' => 'Antsiranana',
-                ]
+            ->add('customer',EntityType::class,[
+                'label'=>'Client',
+                'class'=>Customer::class,
+                'required'=>false
             ])
             ->add('observation',TextType::class,[
-                'label'=>'Observation',
+                'label'=>'observation',
                 'required'=>false
             ])
             ->add('date',DateType::class,[

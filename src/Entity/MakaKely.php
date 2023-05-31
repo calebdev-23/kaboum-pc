@@ -26,8 +26,10 @@ class MakaKely
     #[ORM\Column]
     private ?float $price = null;
 
-    #[ORM\Column(nullable: true)]
-    private ?bool $isPaid = null;
+
+
+    #[ORM\Column(length: 255)]
+    private ?string $observation = null;
 
     public function getId(): ?int
     {
@@ -82,14 +84,15 @@ class MakaKely
         return $this;
     }
 
-    public function isIsPaid(): ?bool
+
+    public function getObservation(): ?string
     {
-        return $this->isPaid;
+        return $this->observation;
     }
 
-    public function setIsPaid(?bool $isPaid): self
+    public function setObservation(string $observation): self
     {
-        $this->isPaid = $isPaid;
+        $this->observation = $observation;
 
         return $this;
     }

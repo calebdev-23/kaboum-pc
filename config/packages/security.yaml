@@ -31,11 +31,11 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-         - { path: ^/admin, roles: ROLE_ADMIN }
-         - { path: ^/recette, roles: ROLE_ADMIN }
-         - { path: ^/recette-today, roles: ROLE_ADMIN }
-         - { path: ^/depense, roles: ROLE_ADMIN }
-         - { path: ^/product, roles: ROLE_ADMIN }
+         - { path: ^/admin, roles: ROLE_USER }
+         - { path: ^/recette, roles: ROLE_USER }
+         - { path: ^/recette-today, roles: ROLE_USER }
+         - { path: ^/depense, roles: ROLE_USER }
+         - { path: ^/product, roles: ROLE_USER }
         # - { path: ^/profile, roles: ROLE_USER }
 
 when@test:

@@ -26,6 +26,9 @@ class ProduitHome
     #[ORM\Column(length: 255)]
     private ?string $observation = null;
 
+    #[ORM\ManyToOne(inversedBy: 'produitHomes')]
+    private ?Produits $produit = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +78,18 @@ class ProduitHome
     public function setObservation(string $observation): self
     {
         $this->observation = $observation;
+
+        return $this;
+    }
+
+    public function getProduit(): ?Produits
+    {
+        return $this->produit;
+    }
+
+    public function setProduit(?Produits $produit): self
+    {
+        $this->produit = $produit;
 
         return $this;
     }

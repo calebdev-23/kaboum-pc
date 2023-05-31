@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Classe\Mail;
 use App\Classe\SearchRecette;
 use App\Classe\SearchRecetteForm;
 use App\Entity\Recette;
@@ -149,6 +148,8 @@ class RecetteController extends AbstractController
             }
 
 
+
+
                 $stock = $stcok_old + $oldQuantite;
                 $stock_actuel = $stock - $quantite_actu;
                 $produits->setStock($stock_actuel);
@@ -187,6 +188,7 @@ class RecetteController extends AbstractController
     #[Route('/recette-today/edit/{id}', name: 'app_edit_recette_today')]
     public function edit_today(Request $request, $id): Response
     {
+
         $recette = $this->manager->getRepository(Recette::class)->findOneById($id);
         $oldQuantite = $recette->getQuantite();
 
@@ -199,6 +201,8 @@ class RecetteController extends AbstractController
 
         if($form->isSubmitted() and $form->isSubmitted())
         {
+
+
 
             $recette = $form->getData();
             $quantite_actu = $form->get('quantite')->getData();
@@ -268,6 +272,7 @@ class RecetteController extends AbstractController
         $stock_old = $produit->getStock();
         $stock_actuel = $stock_old + $oldQuantite;
 
+
         $produit->setStock($stock_actuel);
         $this->manager->persist($produit);
         $this->manager->remove($recette);
@@ -277,50 +282,5 @@ class RecetteController extends AbstractController
 
 
 
-    #[Route('/recette/add-quantite/{id}', name: 'app_add_quantite_recette')]
-    public function add_quantite(Request $request, $id): Response
-    {
 
-        $recette = $this->manager->getRepository(Recette::class)->findOneById($id);
-        $oldQuantite = $recette->getQuantite();
-        $quantite_actu =  $oldQuantite + 1 ;
-        $recette->setQuantite($quantite_actu);
-
-        $produit = $recette->getProduits();
-        $stock_old = $produit->getStock();
-        $stock_actuel = $stock_old - 1;
-
-        $produit->setStock($stock_actuel);
-        $this->manager->persist($produit);
-        $this->manager->persist($recette,$produit);
-        $this->manager->flush();
-        return $this->redirectToRoute('app_recette');
-    }
-
-    #[Route('/recette/decrease-quantite/{id}', name: 'app_decrease_quantite_recette')]
-    public function decrease_quantite(Request $request, $id): Response
-    {
-
-        $recette = $this->manager->getRepository(Recette::class)->findOneById($id);
-        $oldQuantite = $recette->getQuantite();
-        $quantite_actu =  $oldQuantite - 1 ;
-        $recette->setQuantite($quantite_actu);
-
-        $produit = $recette->getProduits();
-        $stock_old = $produit->getStock();
-        $stock_actuel = $stock_old + 1;
-        $produit->setStock($stock_actuel);
-
-        if( $oldQuantite == 1 ){
-            $this->manager->remove($recette);
-            $this->manager->persist($produit);
-            $this->manager->flush();
-        } else{
-            $this->manager->persist($produit);
-            $this->manager->persist($recette);
-            $this->manager->flush();
-        }
-
-        return $this->redirectToRoute('app_recette');
-    }
 }

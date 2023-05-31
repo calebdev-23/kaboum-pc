@@ -21,9 +21,6 @@ class Payment
     #[ORM\OneToMany(mappedBy: 'payment', targetEntity: Recette::class)]
     private Collection $recettes;
 
-    #[ORM\OneToMany(mappedBy: 'payment', targetEntity: UniteCentrale::class)]
-    private Collection $uniteCentrales;
-
     public function __construct()
     {
         $this->recettes = new ArrayCollection();
@@ -83,35 +80,7 @@ class Payment
        return $this->getName();
     }
 
-    /**
-     * @return Collection<int, UniteCentrale>
-     */
-    public function getUniteCentrales(): Collection
-    {
-        return $this->uniteCentrales;
-    }
 
-    public function addUniteCentrale(UniteCentrale $uniteCentrale): self
-    {
-        if (!$this->uniteCentrales->contains($uniteCentrale)) {
-            $this->uniteCentrales->add($uniteCentrale);
-            $uniteCentrale->setPayment($this);
-        }
-
-        return $this;
-    }
-
-    public function removeUniteCentrale(UniteCentrale $uniteCentrale): self
-    {
-        if ($this->uniteCentrales->removeElement($uniteCentrale)) {
-            // set the owning side to null (unless already changed)
-            if ($uniteCentrale->getPayment() === $this) {
-                $uniteCentrale->setPayment(null);
-            }
-        }
-
-        return $this;
-    }
 
 
 }

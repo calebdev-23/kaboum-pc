@@ -37,73 +37,63 @@
         </style>
     </head>
     <body>
-    <nav class="navbar navbar-dark bg-dark fixed-top ">
-        <div class="container-fluid d-flex align-items-center">
-            <a class="navbar-brand police me-auto" href="{{ path('app_product') }}" ><img src="{{ asset('logo.jpg') }}" alt="logo" class="rounded-circle mylogo"> KABOUM-PC</a>
+    <header class="py-2 mb-3 border-bottom bg-dark fixed-top">
+        <div class="container d-grid gap-3 align-items-center " style="grid-template-columns: 1fr 2fr;">
 
+            <a class="navbar-brand police me-auto link-light" href="/admin" ><img src="{{ asset('logo.jpg') }}" alt="logo" class="rounded-circle mylogo"> KABOUM-PC</a>
+            {% if app.user %}
+                <div class="d-flex align-items-center justify-content-end">
 
-            <a type="button" class="btn btn-primary position-relative mx-3" href="{{ path('app_recette_today') }}">
-                <img src="{{ asset('img/cart.svg') }}" alt="cart">
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    {{ recette.getRecetteToDay }}
-                    <span class="visually-hidden">unread messages</span>
+                    <div class="flex-shrink-0 dropdown">
+                        <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/Photo_profi/{{ app.user.illustration }}" alt="mdo" width="32" height="32" class="rounded-circle mx-1">{{ app.user.name }}
+                        </a>
+                        <ul class="dropdown-menu text-small shadow">
+                            <li>
+                                <a class="dropdown-item"  href="{{ path('app_account') }}">
+                                    <img src="{{ asset('img/profil.svg') }}" alt="" class="mx-1">Mon profil
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"  href="{{ path('app_product') }}">
+                                    <img src="{{ asset('img/produit.svg') }}" alt="" class="mx-1">Produit
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="{{ path('app_depense') }}">
+                                    <img src="{{ asset('img/depense.svg') }}" alt="" class="mx-1"> Dépense
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{ path('app_customer') }}">
+                                    <img src="{{ asset('img/client.svg') }}" alt="" class="mx-1" class="w-25"> Client
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/admin">
+                                    <img src="{{ asset('img/admin.svg') }}" alt="" class="mx-1">Tableau de bord</a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" href="{{ path('app_logout') }}">
+                                    <img src="{{ asset('img/logOut.svg') }}" alt="" class="mx-1">Log Out
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <a type="button" class="btn btn-primary position-relative mx-3" href="{{ path('app_recette_today') }}">
+                        <img src="{{ asset('img/cart.svg') }}" alt="cart">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      {{ recette.nbRecetteToDay }}
                     </span>
-            </a>
-
-            <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </a>
                 </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        {% if is_granted('ROLE_ADMIN') %}
-                            <li class="nav-item  admin text-center">
-                                <a href="/admin" ><img src="{{ asset('logo.jpg') }}" alt="photo de profil" class="photo_profil rounded-circle w-50 mb-3"> </a>
-                            </li>
-                            {% else %}
-                                <li class="nav-item  admin text-center">
-                                    <a href="{{ path('app_product') }}" ><img src="{{ asset('logo.jpg') }}" alt="photo de profil" class="photo_profil rounded-circle w-50 mb-3"> </a>
-                                </li>
-                        {% endif %}
-                        <li class="nav-item text-center ">
-                            <a class="nav-link" aria-current="page" href="{{ path('app_product') }}">Produits</a>
-                        </li>
-                        <li class="nav-item text-center ">
-                            <a class="nav-link" aria-current="page" href="{{ path('app_recette') }}">Recette</a>
-                        </li>
+            {% endif %}
 
-                        <li class="nav-item text-center ">
-                            <a class="nav-link" aria-current="page" href="{{ path('app_depense') }}">Dépense</a>
-                        </li>
-                           {#
-                           <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="{{ path('app_home') }}">Home</a>
-                            </li>
-                           #}
-
-                        {% if app.user %}
-                            <li class="nav-item  btn btn-danger btn-sm">
-                                <a class="nav-link" aria-current="page" href="{{ path('app_logout') }}">Déconnecté</a>
-                            </li>
-                            {% else %}
-                                <li class="nav-item btn btn-success btn-sm">
-                                    <a class="nav-link" aria-current="page" href="{{ path('app_login') }}">Connexion</a>
-                                </li>
-                               {#
-                               <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="{{ path('app_register') }}">S'inscrire</a>
-                                </li>
-                               #}
-                        {% endif %}
-                    </ul>
-                </div>
-            </div>
         </div>
-    </nav>
+    </header>
     <div class="margin">
         {% block body %}{% endblock %}
     </div>

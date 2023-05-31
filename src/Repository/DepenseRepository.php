@@ -43,7 +43,9 @@ class DepenseRepository extends ServiceEntityRepository
     }
     public function FilterByDate(SearchDepense $searchDepense){
         $query = $this->createQueryBuilder('d')
-            ->select('d');
+            ->select('d')
+            ->orderBy('d.date', 'DESC');
+
         if(!empty($searchDepense->date)){
             $query = $query->andWhere('d.date = :date')
                 ->setParameter('date', $searchDepense->date);

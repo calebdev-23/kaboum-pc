@@ -5,7 +5,6 @@ namespace App\Controller\Admin;
 use App\Entity\PcUpgrade;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\MoneyField;
@@ -24,8 +23,7 @@ class PcUpgradeCrudController extends AbstractCrudController
             DateField::new('date', 'Date d\'entré'),
             TextField::new('name','Nom du produit'),
             IntegerField::new('quantite','Quantité'),
-            MoneyField::new('price', 'Prix')->setCurrency('EUR'),
-            BooleanField::new('isPaid'),
+            MoneyField::new('price', 'Prix')->setCurrency('EUR')
         ];
     }
     public function configureCrud(Crud $crud): Crud

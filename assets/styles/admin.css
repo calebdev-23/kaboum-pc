@@ -8,3 +8,52 @@
 #main-menu i {
     font-size: 15px;
 }
+@media screen and (max-width: 991px ){
+    .responsive-logo img {
+       display: none;
+
+    }
+}
+
+.admin .card{
+    border:none;
+    padding: 15px;
+    cursor: pointer;
+    transition:all .2s ease-out;
+}
+
+.admin .card:hover{
+   margin-top: -5px;
+}
+.admin .card span{
+    font-size: 16px;
+    font-family: 'cascadia mono';
+    font-weight: bold;
+}
+
+.admin .card span{
+    font-size: 18px;
+    font-family: 'cascadia mono';
+    font-weight: bold;
+}
+.fournisseur .makakely
+{
+    border:none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #938bdc;
+}
+.fournisseur span{
+    font-family: 'cascadia mono';
+}
+.fournisseur p{
+   font-size: 15px;
+}
+.fournisseur h4{
+    font-family: 'cascadia mono';
+    font-weight: bold;
+}
+
+
+

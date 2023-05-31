@@ -13,14 +13,43 @@
 {% endblock %}
 
 {% block content_title %}
-    Bienvenu dans votre tableau de bord
-{% endblock %}
 
+{% endblock %}
 
 {% block page_content %}
+    <section class="admin">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <a href="{{ path('app_recette_today') }}">
+                        <div class="card  text-bg-success">
+                            <h4>Recette du jour</h4>
+                            <span class="price"> {{ recette.getRecetteToday|number_format(0,',','.') }} Ar</span>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-md-4">
+                    <a href="{{ path('app_depense_today') }}">
+                        <div class="card text-bg-danger my-lg-0 my-md-0 my-3">
+                            <h4>Dépense du jour</h4>
+                            <span class="price text-black">{{ recette.getDepenseToday|number_format(0,',','.') }} Ar</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-bg-info">
+                        <h4>Solde </h4>
+                        <span class="price text-black">{{ recette.Solde|number_format(0,',','.') }} Ar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    {#  {% include 'admin/fournisseur.html.twig' %} #}
 
 {% endblock %}
-
 
 {% block main %}
     {{ block('page_content') }}

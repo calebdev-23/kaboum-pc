@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ customer.username }}{% endblock %}
+
+{% block body %}
+    <section class="show-cutomer">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h3 class="text-capitalize d-inline">{{ customer.username }}</h3>
+                </div>
+                <div class="col-6 text-end">
+                    <button type="button" class="btn btn-info btn-sm  mx-3" data-bs-toggle="modal" data-bs-target="#exampleModalRecette">Nouveau recette</button>
+                </div>
+                {{ include ('customer/recette.html.twig') }}
+            </div>
+           {% if customer.recettes|length != 0 %}
+               <table class="table table-hover">
+                   <thead>
+                   <tr>
+                       <th>Nom du produit</th>
+                       <th>Prix</th>
+
+                       <th>Quantité</th>
+                       <th></th>
+                   </tr>
+                   </thead>
+                   <tbody>
+                   {% set totale = 0 %}
+                   {% for recette in customer.recettes %}
+                       <tr>
+                           <td>
+                               {{ recette.name }}
+                           </td>
+                           <td>
+                               {{ recette.price|number_format(0,',','.') }} Ar
+                           </td>
+                           <td>
+                               {{ recette.quantite }}
+                           </td>
+                           <td>
+                               <a href="{{ path('app_edit_recette_customer', { id : recette.id}) }}" class="mx-3"><img src="{{ asset('img/pencil.svg') }}" alt=""></a>
+                               <a href="{{ path('app_delete_recette_customer', { id : recette.id}) }}"><img src="{{ asset('img/trash.svg') }}" alt=""></a>
+                           </td>
+                       </tr>
+                       {% set totale = totale + recette.price %}
+                   {% endfor %}
+                   </tbody>
+               </table>
+               <p class="recette">Net à payer : <span>{{ totale|number_format(0,',','.') }} Ar</span></p>
+               {% else %}
+               <div class="alert alert-danger mt-3 text-center"> Pas de recette pour ce client, veuillez en ajouter</div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

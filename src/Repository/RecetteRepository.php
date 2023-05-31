@@ -44,7 +44,8 @@ class RecetteRepository extends ServiceEntityRepository
 
     public function Filter(SearchRecette $recette){
         $query = $this->createQueryBuilder('r')
-            ->select('r');
+            ->select('r')
+            ->orderBy('r.date', 'DESC');
 
         if(!empty($recette->string)){
             $query = $query

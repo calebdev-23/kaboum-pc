@@ -1,41 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d59de3e0-dcac-48b0-a80e-19a8657634ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/cart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/uc/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/client.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/connexion.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/profil.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classe/EventSucriber.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/Service.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/ServiceEkinox.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/ServiceJames.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/ServiceKs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/ServiceMampionina.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/ServiceMkl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/ServiceUlysse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ekinox/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/james/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ks/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/makakely/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/mampionina/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ulysse/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/admin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/plus.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/plus.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classe/SearchDepenseForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classe/SearchDepenseForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classe/SearchProduitForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classe/SearchProduitForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20220930095736.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20220930100857.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221004062623.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221004064954.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221005085053.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221006060619.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221011102130.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221015170259.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221016092029.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221016115319.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221017074822.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221019070322.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221021055253.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221021063704.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221026063552.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221031095752.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221031162337.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221031175102.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221106080737.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221107155812.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221107160056.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221107160253.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221114160443.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221114160843.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221127111614.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221127115652.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221127120306.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221127121134.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221127152636.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20221127154551.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/cart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/cart.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/CategoriesCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/CategoriesCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ClientCrudController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/CommandesCrudController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DetailCommandeCrudController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/EkinoxCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/EkinoxCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/FournisseursCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/FournisseursCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/MakaKelyCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/MakaKelyCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/PcUpgradeCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/PcUpgradeCrudController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ProduitHomeCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ProduitHomeCrudController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ProduitsCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ProduitsCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UlysseCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UlysseCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DepenseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DepenseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/RecetteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RecetteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Commandes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Commandes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UcController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Commandes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/DetailCommande.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Ekinox.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ekinox.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/MakaKely.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/MakaKely.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Mampionina.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Mampionina.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Payment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/PcUpgrade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PcUpgrade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/ProduitHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ProduitHome.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Produits.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Produits.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Recette.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Recette.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Ulysse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ulysse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/UniteCentrale.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RecetteEditFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RecetteEditFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RecetteFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RecetteFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UcformType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ClientRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CommandesRepository.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/DepenseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/DepenseRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ProduitsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProduitsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/DetailCommandeRepository.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/RecetteRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RecetteRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/TestRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UniteCentraleRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ServiceRecette.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceRecette.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/depense/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/depense/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/depense/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/depense/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/depense/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/depense/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/client/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/client/show.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/product/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/recette/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recette/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/recette/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recette/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/recette/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recette/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/recette/today.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recette/today.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uc/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +306,12 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Sam/Documents/kaboum-pc23&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -338,7 +426,80 @@
       <workItem from="1669522843060" duration="4013000" />
       <workItem from="1669543230714" duration="7903000" />
       <workItem from="1669562481940" duration="4860000" />
-      <workItem from="1669615319964" duration="505000" />
+      <workItem from="1669615319964" duration="619000" />
+      <workItem from="1669617104837" duration="2813000" />
+      <workItem from="1669708921822" duration="8069000" />
+      <workItem from="1669719586901" duration="1451000" />
+      <workItem from="1669789277946" duration="2551000" />
+      <workItem from="1669797851730" duration="12000" />
+      <workItem from="1669798498824" duration="340000" />
+      <workItem from="1669799788006" duration="664000" />
+      <workItem from="1669804887809" duration="2209000" />
+      <workItem from="1669876756817" duration="1865000" />
+      <workItem from="1669882555314" duration="297000" />
+      <workItem from="1669885326546" duration="1117000" />
+      <workItem from="1669894701648" duration="3973000" />
+      <workItem from="1669961942014" duration="4515000" />
+      <workItem from="1669968896704" duration="32000" />
+      <workItem from="1669968965945" duration="1812000" />
+      <workItem from="1669977788380" duration="289000" />
+      <workItem from="1669984233723" duration="135000" />
+      <workItem from="1670228392008" duration="1805000" />
+      <workItem from="1670304794251" duration="3504000" />
+      <workItem from="1670316562076" duration="26000" />
+      <workItem from="1670318999011" duration="4995000" />
+      <workItem from="1670481430073" duration="2590000" />
+      <workItem from="1670486600118" duration="459000" />
+      <workItem from="1670486268960" duration="382000" />
+      <workItem from="1670697903668" duration="1507000" />
+      <workItem from="1670725822616" duration="1830000" />
+      <workItem from="1670733488364" duration="2737000" />
+      <workItem from="1670775484414" duration="6121000" />
+      <workItem from="1670814720146" duration="3476000" />
+      <workItem from="1670820446974" duration="6278000" />
+      <workItem from="1670903678958" duration="8071000" />
+      <workItem from="1670989789136" duration="7106000" />
+      <workItem from="1671021769589" duration="1723000" />
+      <workItem from="1671034539177" duration="5394000" />
+      <workItem from="1671076161040" duration="1668000" />
+      <workItem from="1671083905141" duration="95000" />
+      <workItem from="1671086027835" duration="4638000" />
+      <workItem from="1671171376681" duration="4065000" />
+      <workItem from="1671514348646" duration="1015000" />
+      <workItem from="1671515408010" duration="295000" />
+      <workItem from="1671600545872" duration="4300000" />
+      <workItem from="1671794895071" duration="443000" />
+      <workItem from="1671795393945" duration="149000" />
+      <workItem from="1671795878426" duration="658000" />
+      <workItem from="1671797292173" duration="2045000" />
+      <workItem from="1671807395932" duration="881000" />
+      <workItem from="1671810901753" duration="106000" />
+      <workItem from="1672062937108" duration="2799000" />
+      <workItem from="1672071965193" duration="4562000" />
+      <workItem from="1672106884276" duration="3157000" />
+      <workItem from="1672110098410" duration="19000" />
+      <workItem from="1672126177992" duration="2239000" />
+      <workItem from="1672129213774" duration="1809000" />
+      <workItem from="1672906083118" duration="1061000" />
+      <workItem from="1672994556831" duration="1353000" />
+      <workItem from="1672995933520" duration="864000" />
+      <workItem from="1673001890904" duration="3273000" />
+      <workItem from="1673252060189" duration="3763000" />
+      <workItem from="1673260173651" duration="2185000" />
+      <workItem from="1673335363709" duration="972000" />
+      <workItem from="1673342070188" duration="2181000" />
+      <workItem from="1673348220105" duration="530000" />
+      <workItem from="1673350257560" duration="4775000" />
+      <workItem from="1673407058651" duration="327000" />
+      <workItem from="1673407407965" duration="919000" />
+      <workItem from="1673762153259" duration="392000" />
+      <workItem from="1673768581867" duration="2270000" />
+      <workItem from="1674184717454" duration="450000" />
+      <workItem from="1685430837665" duration="5688000" />
+      <workItem from="1685438901633" duration="221000" />
+      <workItem from="1685439146150" duration="1352000" />
+      <workItem from="1685513057064" duration="4419000" />
+      <workItem from="1685533195688" duration="2383000" />
     </task>
     <servers />
   </component>

@@ -1,8 +1,8 @@
 @import 'bootstrap';
-@import '~font-awesome';
 body
 {
-    font-family: "Century Gothic";
+
+    font-family: "Century Gothic", serif;
     margin: 0;
     padding: 0;
 }
@@ -109,16 +109,27 @@ margin-top: 100px;
 }
 .login .container
 {
-
     display: flex;
     height: 70vh;
-
 }
 .login .container form
 {
-
-    width: 40%;
+    width: 350px;
     margin: auto;
+}
+.login .container form input
+{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.29);
+    border-radius: 0px;
+
+}
+.login .container form input:focus
+{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 255, 0.38);
+    border-radius: 0px;
+    box-shadow: none;
 
 }
 /**responsive login**/
@@ -185,3 +196,30 @@ margin-top: 100px;
 }
 
 /*-----------Section depense end ----------*/
+
+
+/*-----------Section Client  ----------*/
+
+.input_customer:focus{
+    box-shadow: none;
+    border-color: rgba(13, 94, 66, 0.57);
+}
+.customer form .ctbtn{
+    border: 1px solid black;
+    border-left:none;
+    background-color: white;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: black;
+    color:white;
+}
+.customer table a{
+   padding: 10px;
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    cursor:pointer;
+}
+
+
+/*-----------Section Client end----------*/

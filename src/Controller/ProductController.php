@@ -10,7 +10,6 @@ use App\Entity\Produits;
 use App\Entity\Recette;
 use App\Repository\CategoriesRepository;
 use App\Repository\ProduitsRepository;
-use App\Repository\TestRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -38,7 +37,7 @@ class ProductController extends AbstractController
         $paginate = $paginator->paginate(
             $produits,
             $request->query->getInt('page', 1),
-            14
+            15
         );
         return $this->render('product/index.html.twig', [
             'produits' => $paginate,
@@ -70,6 +69,8 @@ class ProductController extends AbstractController
         $this->manager->persist($new_recette, $produit);
         $this->manager->flush();
 
-      return $this->redirectToRoute('app_product');
+          return $this->redirectToRoute('app_product');
+
     }
+
 }

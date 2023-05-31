@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pc-Upgrade{% endblock %}
+
+{% block body %}
+    <section class="pc-upgade">
+        <div class="container">
+            <h1>PcUpgrade index</h1>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Quantite</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                    <th>Observation</th>
+                    <th>actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for pc_upgrade in pc_upgrades %}
+                    <tr>
+                        <td>{{ pc_upgrade.id }}</td>
+                        <td>{{ pc_upgrade.name }}</td>
+                        <td>{{ pc_upgrade.quantite }}</td>
+                        <td>{{ pc_upgrade.price }}</td>
+                        <td>{{ pc_upgrade.date ? pc_upgrade.date|date('Y-m-d') : '' }}</td>
+                        <td>{{ pc_upgrade.observation }}</td>
+                        <td>
+                            <a href="{{ path('app_pc_upgrade_show', {'id': pc_upgrade.id}) }}">show</a>
+                            <a href="{{ path('app_pc_upgrade_edit', {'id': pc_upgrade.id}) }}">edit</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="7">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <a href="{{ path('app_pc_upgrade_new') }}">Create new</a>
+        </div>
+    </section>
+
+{% endblock %}

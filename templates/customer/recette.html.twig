@@ -1,0 +1,24 @@
+
+<div class="modal fade" id="exampleModalRecette" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Nouveau recette</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {{ form_start(form) }}
+                {{ form_row(form.produits) }}
+                {{ form_row(form.quantite) }}
+                {{ form_row(form.price) }}
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Valider</button>
+                </div>
+                {{ form_end(form) }}
+            </div>
+
+        </div>
+    </div>
+</div>
+

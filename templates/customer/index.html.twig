@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Client{% endblock %}
+
+{% block body %}
+<section class="customer">
+    <div class="container">
+        <div class="d-flex align-items-center">
+            <h2>Liste des clients </h2>
+            <button type="button" class="btn btn-info btn-sm  mx-3" data-bs-toggle="modal" data-bs-target="#exampleModal">New Client</button>
+        </div>
+                {{ include ('customer/new.html.twig') }}
+                {% if customers|length == 0%}
+                    <div class="alert alert-danger">Aucun client pour le moment, veuillez en ajouter</div>
+                {% else %}
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nom du client</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for customer in customers %}
+                            <tr>
+                                <td>
+                                    <a href="{{ path('app_show_customer', { id: customer.id}) }}">{{ customer.username }}</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                {% endif %}
+    </div>
+</section>
+{% endblock %}

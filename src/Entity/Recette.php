@@ -31,7 +31,7 @@ class Recette
     #[ORM\ManyToOne(inversedBy: 'recettes')]
     private ?Payment $payment = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $lieu = null;
 
     #[ORM\Column(length: 255, nullable: true)]
@@ -39,6 +39,9 @@ class Recette
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;
+
+    #[ORM\ManyToOne(inversedBy: 'recettes')]
+    private ?Customer $customer = null;
 
 
 
@@ -139,6 +142,31 @@ class Recette
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+
+    public function FullPrice()
+    {
+        $totale = $this->getPrice() * $this->getQuantite() * 100;
+        return  $totale;
+    }
+
+    public function priceUnique()
+    {
+        $total = $this->getPrice() * 100;
+        return  $total;
+    }
+
+    public function getCustomer(): ?Customer
+    {
+        return $this->customer;
+    }
+
+    public function setCustomer(?Customer $customer): self
+    {
+        $this->customer = $customer;
 
         return $this;
     }

@@ -23,11 +23,11 @@ class Ulysse
     #[ORM\Column]
     private ?float $price = null;
 
-    #[ORM\Column]
-    private ?bool $isPaid = null;
-
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $observation = null;
 
 
     public function getId(): ?int
@@ -71,17 +71,6 @@ class Ulysse
         return $this;
     }
 
-    public function isIsPaid(): ?bool
-    {
-        return $this->isPaid;
-    }
-
-    public function setIsPaid(bool $isPaid): self
-    {
-        $this->isPaid = $isPaid;
-
-        return $this;
-    }
 
     public function getDate(): ?\DateTimeInterface
     {
@@ -91,6 +80,18 @@ class Ulysse
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getObservation(): ?string
+    {
+        return $this->observation;
+    }
+
+    public function setObservation(string $observation): self
+    {
+        $this->observation = $observation;
 
         return $this;
     }

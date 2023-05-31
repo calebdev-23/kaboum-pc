@@ -3,6 +3,12 @@ twig:
     form_themes: ['bootstrap_5_layout.html.twig']
     globals:
         recette: '@App\Service\ServiceRecette'
+        Mkl: '@App\Service\ServiceMkl'
+        Ekinox: '@App\Service\ServiceEkinox'
+        Ulysse: '@App\Service\ServiceUlysse'
+        James: '@App\Service\ServiceJames'
+        Ks: '@App\Service\ServiceKs'
+        Mampionina: '@App\Service\ServiceMampionina'
 when@test:
     twig:
         strict_variables: true

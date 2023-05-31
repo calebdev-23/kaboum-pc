@@ -10,14 +10,15 @@
 
                     <div class="d-flex align-items-center">
                         <h2>  Recette du jour </h2>
-                        <a href="{{ path('app_recette') }}" class="btn btn-success btn-sm  mx-3 ">Retour</a>
                         {# <a href="{{ path('app_new_recette') }}" class=" btn btn-success btn-sm mx-3">Ajouter</a> #}
                     </div>
 
 
                     {% if recettes|length == 0 %}
-                        <div class="alert alert-danger text-center mt-5" role="alert">
-                            Aucune recette
+                        <div class="vh-70 d-flex justify-content-center align-items-center">
+                            <div class="alert alert-danger text-center mt-5" role="alert">
+                                Aucune recette
+                            </div>
                         </div>
                     {% else %}
                         <table class="table table-hover">
@@ -28,7 +29,6 @@
                                 <th scope="col">Quantité</th>
                                 <th scope="col">Prix</th>
                                 <th scope="col">Prix Total</th>
-                                <th scope="col">Payement</th>
                                 <th scope="col">Client</th>
                             </tr>
                             </thead>
@@ -51,15 +51,24 @@
                                     </td>
                                     <td>{{ recette.price|number_format(0,',','.') }} Ar</td>
                                     <td>{{ (recette.price * recette.quantite)|number_format(0,',','.') }} Ar</td>
-                                    <td>
+                                    {#
+                                        <td>
                                         {% if  recette.payment == 'Non payé' %}
-                                            <button class="btn btn-danger btn-sm"> {{ recette.payment }}</button>
+                                            <span class="badge text-bg-danger"> {{ recette.payment }}</span>
                                         {% else %}
-                                            <button class="btn btn-success btn-sm text-white"> {{ recette.payment }}</button>
+                                            <span class="badge text-bg-success"> {{ recette.payment }}</span>
                                         {% endif %}
 
                                     </td>
-                                    <td>{{ recette.observation }}</td>
+                                    #}
+                                    <td>
+                                        {% if recette.customer != null %}
+                                            <a href="{{ path('app_show_customer',{ id: recette.customer.id}) }}">{{ recette.customer }}</a>
+                                            {% else %}
+                                               ____
+                                        {% endif %}
+
+                                    </td>
                                     <td>
                                         <a href="{{ path('app_edit_recette_today', { id : recette.id}) }}" class="mx-3"><img src="{{ asset('img/pencil.svg') }}" alt=""></a>
                                         <a href="{{ path('app_delete_recette_today', { id : recette.id}) }}"><img src="{{ asset('img/trash.svg') }}" alt=""></a>

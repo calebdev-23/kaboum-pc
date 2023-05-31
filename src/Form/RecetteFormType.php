@@ -34,34 +34,34 @@ class RecetteFormType extends AbstractType
             ])
 
             ->add('quantite',IntegerType::class,[
-                'label'=>'Quantité'
+                'label'=>'Quantité',
             ])
             ->add('price',TextType::class,[
                 'label'=>'Prix'
             ])
-            ->add('payment',EntityType::class,[
-                'label'=>'payment',
-                'class'=>Payment::class
-            ])
-            ->add('lieu',ChoiceType::class,[
-                'label'=>'Lieu de livraison',
-                'choices'=>[
-                    'Pas de livraison'=>'Pas de livraison',
-                    'Antananarivo' => 'Antananarivo',
-                    'Toamasina' => 'Toamasina',
-                    'Mahjanga' => 'Mahajanga',
-                    'Fianarantsoa' => 'Fianarantsoa',
-                    'Toliara' => 'Toliara',
-                    'Antsiranana' => 'Antsiranana',
-                ]
-            ])
-            ->add('observation',TextType::class,[
-                'label'=>'Observation',
-                'required'=>false
-            ])
+            /* ->add('payment',EntityType::class,[
+                 'label'=>'payment',
+                 'class'=>Payment::class
+             ])
+             ->add('lieu',ChoiceType::class,[
+                 'label'=>'Lieu de livraison',
+                 'choices'=>[
+                     'Pas de livraison'=>'Pas de livraison',
+                     'Antananarivo' => 'Antananarivo',
+                     'Toamasina' => 'Toamasina',
+                     'Mahjanga' => 'Mahajanga',
+                     'Fianarantsoa' => 'Fianarantsoa',
+                     'Toliara' => 'Toliara',
+                     'Antsiranana' => 'Antsiranana',
+                 ]
+             ])
+             ->add('observation',TextType::class,[
+                 'label'=>'Observation',
+                 'required'=>false
+             ])
             ->add('date',DateType::class,[
                 'widget'=>'single_text'
-            ])
+            ]) */
         ;
     }
 

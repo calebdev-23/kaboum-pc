@@ -34,8 +34,7 @@ class Produits
     #[ORM\ManyToOne(inversedBy: 'produits')]
     private ?Fournisseurs $fournisseur = null;
 
-    #[ORM\OneToMany(mappedBy: 'produit', targetEntity: DetailCommande::class)]
-    private Collection $detailCommandes;
+
 
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
@@ -46,14 +45,16 @@ class Produits
     #[ORM\ManyToMany(targetEntity: Categories::class, inversedBy: 'produits')]
     private Collection $categories;
 
+    #[ORM\OneToMany(mappedBy: 'produit', targetEntity: ProduitHome::class)]
+    private Collection $produitHomes;
+
 
     public function __construct()
     {
-        $this->detailCommandes = new ArrayCollection();
+
         $this->recettes = new ArrayCollection();
         $this->recette = new ArrayCollection();
         $this->homes = new ArrayCollection();
-        $this->uniteCentrales = new ArrayCollection();
         $this->Processeur = new ArrayCollection();
         $this->ram = new ArrayCollection();
         $this->graphique = new ArrayCollection();
@@ -62,6 +63,7 @@ class Produits
         $this->alimentation = new ArrayCollection();
         $this->boitier = new ArrayCollection();
         $this->categories = new ArrayCollection();
+        $this->produitHomes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -154,35 +156,6 @@ class Produits
         return $this;
     }
 
-    /**
-     * @return Collection<int, DetailCommande>
-     */
-    public function getDetailCommandes(): Collection
-    {
-        return $this->detailCommandes;
-    }
-
-    public function addDetailCommande(DetailCommande $detailCommande): self
-    {
-        if (!$this->detailCommandes->contains($detailCommande)) {
-            $this->detailCommandes->add($detailCommande);
-            $detailCommande->setProduit($this);
-        }
-
-        return $this;
-    }
-
-    public function removeDetailCommande(DetailCommande $detailCommande): self
-    {
-        if ($this->detailCommandes->removeElement($detailCommande)) {
-            // set the owning side to null (unless already changed)
-            if ($detailCommande->getProduit() === $this) {
-                $detailCommande->setProduit(null);
-            }
-        }
-
-        return $this;
-    }
 
     public function getSlug(): ?string
     {
@@ -251,6 +224,36 @@ class Produits
     public function removeCategory(Categories $category): self
     {
         $this->categories->removeElement($category);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, ProduitHome>
+     */
+    public function getProduitHomes(): Collection
+    {
+        return $this->produitHomes;
+    }
+
+    public function addProduitHome(ProduitHome $produitHome): self
+    {
+        if (!$this->produitHomes->contains($produitHome)) {
+            $this->produitHomes->add($produitHome);
+            $produitHome->setProduit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProduitHome(ProduitHome $produitHome): self
+    {
+        if ($this->produitHomes->removeElement($produitHome)) {
+            // set the owning side to null (unless already changed)
+            if ($produitHome->getProduit() === $this) {
+                $produitHome->setProduit(null);
+            }
+        }
 
         return $this;
     }

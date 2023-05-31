@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mampionina{% endblock %}
+
+{% block body %}
+    <section class="makakely">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <h3>{{ controller_name }} </h3>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 text-end">
+                    <a href="{{ path('app_new_mampionina') }}" class="btn btn-primary btn-sm">Ajouter</a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <span class="badge text-bg-success "> Recette : {{ Mampionina.getRecette|number_format(0,',','.') }} Ar</span>
+                <span class="badge text-bg-danger mx-3">Dépense : {{ Mampionina.getDepense|number_format(0,',','.') }} Ar</span>
+                <span class="badge text-bg-secondary ">Solde : {{ Mampionina.getSolde|number_format(0,',','.') }} Ar</span>
+            </div>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Nom du produit</th>
+                    <th scope="col">Quantité</th>
+                    <th scope="col">Prix unitaire</th>
+                    <th scope="col">Prix totale</th>
+                    <th scope="col">Obsevation</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% set recette = 0 %}
+                {% set depense = 0 %}
+                {% set solde = 0 %}
+
+                {% for mkl in mkl %}
+                    <tr>
+                        <th scope="row">{{ mkl.date|date('d-m-Y') }}</th>
+                        <td>{{ mkl.name }}</td>
+                        <td>{{ mkl.quantite }}</td>
+                        <td>{{ (mkl.price)|number_format(0,',','.') }} Ar</td>
+                        <td>{{ ( (mkl.quantite * mkl.price) )|number_format(0,',','.') }} Ar</td>
+                        <td>
+                            {% if  mkl.observation == 'Recette' %}
+                                <span class="badge text-bg-success"> {{ mkl.observation }}</span>
+                                {% set recette = recette + ( (mkl.quantite * mkl.price)) %}
+                            {% else %}
+                                <span class="badge text-bg-danger"> {{ mkl.observation }}</span>
+                                {% set depense = depense + ( (mkl.quantite * mkl.price) ) %}
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a href="{{ path('app_edit_mampionina',{'id':mkl.id}) }}" class="mx-3"><img src="{{ asset('img/pencil.svg') }}" alt=""></a>
+                            <a href="{{ path('app_delete_mampionina',{'id':mkl.id}) }}"><img src="{{ asset('img/trash.svg') }}" alt=""></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+
+        </div>
+    </section>
+{% endblock %}

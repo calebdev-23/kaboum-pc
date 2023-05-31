@@ -14,6 +14,7 @@ use App\Entity\Payment;
 use App\Entity\PcUpgrade;
 use App\Entity\ProduitHome;
 use App\Entity\Produits;
+use App\Entity\Recette;
 use App\Entity\Test;
 use App\Entity\Ulysse;
 use App\Entity\User;
@@ -73,15 +74,34 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa-solid fa-gauge');
-        yield MenuItem::linkToCrud('Maison','fa fa-house-user',ProduitHome::class);
-        yield MenuItem::linkToCrud('Utilisateur','fa-solid fa-users',User::class);
 
         //Produits
 
         yield MenuItem::section('Menu');
+
+        Yield MenuItem::subMenu('Users','fa-solid fa-users')->setSubItems([
+            MenuItem::linkToCrud('Info','fa-solid fa-list', User::class ),
+            MenuItem::linkToCrud('Ajouter','fa-solid fa-plus', User::class )->setAction('new')
+
+        ]);
+
+        Yield MenuItem::subMenu('Maison','fa-solid fa-home')->setSubItems([
+            MenuItem::linkToCrud('Liste','fa-solid fa-list', ProduitHome::class )
+                ->setDefaultSort(['date'=>'DESC']),
+            MenuItem::linkToCrud('Ajouter','fa-solid fa-plus', ProduitHome::class )->setAction('new')
+
+        ]);
+        Yield MenuItem::subMenu('Recette','fa fa-money')->setSubItems([
+            MenuItem::linkToCrud('Liste','fa-solid fa-list', Recette::class )
+            ->setDefaultSort(['date'=>'DESC']),
+            MenuItem::linkToRoute('Recette du jour','fa fa-money','app_recette_today')
+
+        ]);
+
         Yield MenuItem::subMenu('Produits','fa-brands fa-product-hunt')->setSubItems([
             MenuItem::linkToCrud('Liste','fa-solid fa-list', Produits::class ),
-            MenuItem::linkToCrud('Ajouter','fa-solid fa-plus', Produits::class )->setAction('new')
+            MenuItem::linkToCrud('Ajouter','fa-solid fa-plus', Produits::class )->setAction('new'),
+
 
         ]);
         Yield MenuItem::subMenu('Categories','fa-regular fa-c')->setSubItems([
@@ -91,68 +111,23 @@ class DashboardController extends AbstractDashboardController
         ]);
 
 
+
+
         //fournisseur
 
-        yield MenuItem::section('Fournisseurs');
+        yield MenuItem::section('Compte Fournisseurs');
         Yield MenuItem::subMenu('Information','fa-solid fa-users')->setSubItems([
             MenuItem::linkToCrud('Info','fa-solid fa-list', Fournisseurs::class ),
             MenuItem::linkToCrud('Ajouter','fa-solid fa-plus', Fournisseurs::class )->setAction('new')
 
         ]);
 
-        Yield MenuItem::subMenu(' Makakely','fa-brands fa-supple')->setSubItems([
-            MenuItem::linkToCrud('Liste','fa-solid fa-list', MakaKely::class ),
-            MenuItem::linkToCrud('Ajouter','fa-solid fa-plus', MakaKely::class )->setAction('new')
-
-        ]);
-
-        Yield MenuItem::subMenu(' Ekinox','fa-brands fa-supple')->setSubItems([
-            MenuItem::linkToCrud('Liste','fa-solid fa-list', Ekinox::class ),
-            MenuItem::linkToCrud('Ajouter','fa-solid fa-plus', Ekinox::class )->setAction('new')
-
-        ]);
-
-        Yield MenuItem::subMenu(' Pc-Upgrade','fa-brands fa-supple')->setSubItems([
-            MenuItem::linkToCrud('Liste','fa-solid fa-list', PcUpgrade::class ),
-            MenuItem::linkToCrud('Ajouter','fa-solid fa-plus', PcUpgrade::class )->setAction('new')
-
-        ]);
-        Yield MenuItem::subMenu('Ulysse','fa-brands fa-supple')->setSubItems([
-            MenuItem::linkToCrud('Liste','fa-solid fa-list', Ulysse::class ),
-            MenuItem::linkToCrud('Ajouter','fa-solid fa-plus', Ulysse::class )->setAction('new')
-
-        ]);
-
-        Yield MenuItem::subMenu('Mampionina','fa-brands fa-supple')->setSubItems([
-            MenuItem::linkToCrud('Liste','fa-solid fa-list', Mampionina::class ),
-            MenuItem::linkToCrud('Ajouter','fa-solid fa-plus', Mampionina::class )->setAction('new')
-
-        ]);
-
-
-        /*
-        //Client
-        Yield MenuItem::subMenu('Client','fa-solid fa-user')->setSubItems([
-            MenuItem::linkToCrud('Nos Client','fa-solid fa-list', Client::class ),
-            MenuItem::linkToCrud('Ajouter','fa-solid fa-plus', Client::class )->setAction('new')
-
-        ]);
-
-        //Commande
-
-        Yield MenuItem::subMenu('Commande','fa-solid fa-user')->setSubItems([
-            MenuItem::linkToCrud('Commande','fa-solid fa-list', Commandes::class ),
-            MenuItem::linkToCrud('Ajouter','fa-solid fa-plus', Commandes::class )->setAction('new')
-        ]);
-
-        //Detailn du commande
-        Yield MenuItem::subMenu('Detail du commande','fa-solid fa-user')->setSubItems([
-            MenuItem::linkToCrud('Commande','fa-solid fa-list', DetailCommande::class ),
-            MenuItem::linkToCrud('Ajouter','fa-solid fa-plus', DetailCommande::class )->setAction('new')
-        ]);
-
-        */
-
+        yield MenuItem::linkToRoute('Makakely', 'fa fa-user', 'app_makakely');
+        yield MenuItem::linkToRoute('Ekinox', 'fa fa-user-secret', 'app_ekinox');
+        yield MenuItem::linkToRoute('Ulysse', 'fa fa-user-nurse', 'app_ulysse');
+        yield MenuItem::linkToRoute('James', 'fa fa-user-tie', 'app_james');
+        yield MenuItem::linkToRoute('Ks', 'fa-solid fa-person', 'app_ks');
+        yield MenuItem::linkToRoute('Mampionina', 'fa fa-user-nurse', 'app_mampionina');
 
 
     }

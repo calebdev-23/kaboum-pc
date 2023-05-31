@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Ulysse;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+use EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
@@ -35,4 +36,5 @@ class UlysseCrudController extends AbstractCrudController
             ->setPageTitle('new', 'Ajouter un produit')
             ->setPageTitle('edit', 'Modification du produit');
     }
+
 }
