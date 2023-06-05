@@ -51,9 +51,8 @@ class RecetteCrudController extends AbstractCrudController
 
             IntegerField::new('price', 'Prix Unitaire')
                 ->hideOnIndex()
-            ->hideOnDetail()
-
-
+            ->hideOnDetail(),
+             TextField::new('customer', 'Client'),
 
         ];
     }

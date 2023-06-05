@@ -5,120 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d59de3e0-dcac-48b0-a80e-19a8657634ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/client.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/connexion.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/profil.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classe/EventSucriber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/Service.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/ServiceEkinox.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/ServiceJames.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/ServiceKs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/ServiceMampionina.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/ServiceMkl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/ServiceUlysse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ekinox/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/james/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ks/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/makakely/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/mampionina/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ulysse/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20220930095736.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20220930100857.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221004062623.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221004064954.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221005085053.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221006060619.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221011102130.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221015170259.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221016092029.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221016115319.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221017074822.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221019070322.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221021055253.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221021063704.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221026063552.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221031095752.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221031162337.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221031175102.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221106080737.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221107155812.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221107160056.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221107160253.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221114160443.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221114160843.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221127111614.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221127115652.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221127120306.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221127121134.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221127152636.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20221127154551.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/cart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/cart.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/CategoriesCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/CategoriesCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ClientCrudController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/CommandesCrudController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DetailCommandeCrudController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/EkinoxCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/EkinoxCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/FournisseursCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/FournisseursCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/MakaKelyCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/MakaKelyCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/PcUpgradeCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/PcUpgradeCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ProduitHomeCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ProduitHomeCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ProduitsCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ProduitsCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UlysseCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UlysseCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DepenseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DepenseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RecetteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RecetteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UcController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Commandes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/DetailCommande.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ekinox.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ekinox.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/MakaKely.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/MakaKely.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Mampionina.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Mampionina.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/PcUpgrade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PcUpgrade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/ProduitHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ProduitHome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Produits.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Produits.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Recette.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Recette.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ulysse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ulysse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/UniteCentrale.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RecetteEditFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RecetteEditFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RecetteFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RecetteFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/UcformType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ClientRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CommandesRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/DepenseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/DepenseRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/DetailCommandeRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RecetteRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RecetteRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/TestRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UniteCentraleRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ServiceRecette.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceRecette.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/client/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/client/show.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/product/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/recette/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recette/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/recette/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recette/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/recette/today.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recette/today.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/uc/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/uc/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/RecetteCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/RecetteCrudController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -499,7 +388,9 @@
       <workItem from="1685438901633" duration="221000" />
       <workItem from="1685439146150" duration="1352000" />
       <workItem from="1685513057064" duration="4419000" />
-      <workItem from="1685533195688" duration="2383000" />
+      <workItem from="1685533195688" duration="4607000" />
+      <workItem from="1685943924544" duration="846000" />
+      <workItem from="1685944781506" duration="556000" />
     </task>
     <servers />
   </component>
