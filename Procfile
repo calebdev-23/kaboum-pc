@@ -1,1 +1,1 @@
-release: php bin/console doctrine:migrations:migrate && npm run build
+postdeploy: php bin/console doctrine:migrations:migrate
